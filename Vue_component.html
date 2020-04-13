@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Vue_instance</title>
+    </head>
+    <body>
+        <div id=app>
+            {{ message }}
+        </div>
+        <div id="global_component">
+            <button>전역 컴포넌트</button>
+            <my-globalcomponent></my-globalcomponent>
+        </div>
+        <div id="local_component">
+            <button>지역 컴포넌트</button>
+            <my-localcomponent></my-localcomponent>
+        
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+        <script>
+            <!-- 전역 컴포넌트 등록 -->
+            Vue.component('my-globalcomponent',{
+                template:'<div>전역 컴포넌트가 등록 되었습니다!</div>'
+            });
+            new Vue({
+               el:'#global_component' 
+            });
+            
+            
+            <!-- 지역 컴포넌트 등록 -->
+            var cmp={
+                template:'<div>지역 컴포넌트가 등록 되었습니다.</div>'
+            }
+            new Vue({
+               el: '#local_component',
+                components: {
+                'my-localcomponent': cmp
+            } 
+                
+            });
+            
+            
+            <!-- 인스턴스 -->
+            new Vue({
+                el:'#app',
+                data:{
+                    message:"Hello Vue.js!"
+                }
+            })
+        
+        </script>
+        
+    </body>
+
+
+</html> 
