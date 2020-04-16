@@ -43,13 +43,13 @@ book : Doit Vue.js 입문
 - 조합하여 화면을 구성할 수 있는 블록(화면의 특정 영역)을 의미.
 - 트리 모양과 유사
 ```
-##### 2.1 컴포넌트 실습 (지역 컴포넌트 vs 전역 컴포넌트)
+##### 2.1 컴포넌트 실습 (지역 컴포넌트 vs 전역 컴포넌트)   ->  [컴포넌트 실습](https://github.com/anji314/Vue.js_STUDY/blob/master/Vue_component.html)
 ```
   둘의 가장 큰 차이점은 유효 범위가 다르다는것.
   - 전역 컴포넌트 : 인스턴스를 새로 생성할 때마다 인스턴스에 components 속성으로 등록할 필요없이 한번 등록하면 어느 인스턴스에서든지 사용가능.
   - 지역 컴포넌트 : 새 인스턴스를 생성 할 때마다 등록을 해줘야한다.
 ```
-->  [컴포넌트 실습](https://github.com/anji314/Vue.js_STUDY/blob/master/Vue_component.html)
+
 
 
 
