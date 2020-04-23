@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Vue_instance</title>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{ message }}</p>
+            {{ reversedMessage }}<br>
+            <button v-on:click="reverseMsg">문자열 역순</button>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+        <script>
+            /* 
+            - computed 속성 
+            1.데이터의 값이 변경이 되면 자동적으로 재수행된다.== 능동적으로 데이터를 갱신한다.
+            2. 캐싱 : 동일한 연산을 반복하지 않고 결과값을 미리 저장하고 있다가 필요할 때 불러온다.
+            
+            - mothods 속성
+            1. 호출할 때만 해당 로직이 수행되어, 수동적으로 데이터를 갱신 한다.
+            */
+            new Vue({
+                el:'#app',
+                data:{
+                    message:"Hello Vue.js!"
+                },
+                computed:{
+                    reversedMessage:function(){
+                        return this.message.split('').reverse().join('');
+                    }
+                },
+                methods:{
+                    reverseMsg:function(){
+                        this.message=this.message.split('').reverse().join('');
+                        return this.message;
+                    }
+                }
+            });
+        
+        </script>
+        
+    </body>
+
+
+</html>   
